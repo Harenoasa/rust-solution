@@ -20,8 +20,26 @@ impl Solution {
         map.into_iter().map(|(k,v)| v).collect()
     }
 
+    pub fn union_find(nums_ref: &mut [u32],) {
+
+    }
     pub fn longest_consecutive(nums: Vec<i32>) -> i32 {
-        
+        let len = nums.len();
+        let vec = [0u32;100000];
+        for i in 0..len {
+            let consentrate = nums[i];
+            let minus1 = consentrate - 1;
+            let add1 = consentrate + 1;
+            for j in i+1..len {
+                if nums[j] == minus1 || nums[j] == add1 {
+                    Solution::union_find(&mut nums,);
+                    break;
+                }
+            }
+        }
+
+
+        0
     }
 }
 
